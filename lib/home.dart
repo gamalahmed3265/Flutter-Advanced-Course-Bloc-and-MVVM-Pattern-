@@ -1,4 +1,4 @@
-import 'package:app/singleton.dart';
+import 'package:app/points_counter.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,17 +6,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              onPressed: () {
-                var inst = MySingleTon();
-                print(inst);
-              },
-              icon: const Icon(Icons.settings))
-        ],
-      ),
-    );
+    return const PointsCounter();
   }
 }
