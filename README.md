@@ -23,4 +23,4 @@ flutter create appname
 
 ## Demo
 
-<img src="./scrrens/points.png" wight="300" hight="400"/>
+<img src="./scrrens/points.png" width="300" hight="400"/>
