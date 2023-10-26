@@ -15,3 +15,12 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # Flutter-Advanced-Course-Bloc-and-MVVM-Pattern-
+
+## Create App
+```
+flutter create appname
+```
+
+## Demo
+
+<img src="./scrrens/points.png" width="300" hight="400"/>
