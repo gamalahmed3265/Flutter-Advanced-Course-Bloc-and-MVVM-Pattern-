@@ -11,7 +11,14 @@ class PointsCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => PointsCounterCubit(),
-      child: BlocBuilder<PointsCounterCubit, PointsCounterState>(
+      child: BlocConsumer<PointsCounterCubit, PointsCounterState>(
+        listener: (context, state) {
+          final a = context.read<PointsCounterCubit>().incrmentA;
+          final b = context.read<PointsCounterCubit>().incrmentB;
+          if (a > 30 || b > 30) {
+            context.read<PointsCounterCubit>().clear();
+          }
+        },
         builder: (context, state) {
           return Scaffold(
             appBar: AppBar(
