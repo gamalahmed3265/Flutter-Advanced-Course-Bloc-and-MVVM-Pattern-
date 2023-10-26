@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'componts/button_increment.dart';
 import 'cubit/points_counter_cubit.dart';
 
 class PointsCounter extends StatelessWidget {
@@ -40,61 +41,27 @@ class PointsCounter extends StatelessWidget {
                               fontSize: 150,
                             ),
                           ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.all(8),
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(150, 50),
-                            ),
-                            onPressed: () {
-                              context
-                                  .read<PointsCounterCubit>()
-                                  .teamIncrement(PointsCatogryStstus.A, 1);
-                            },
-                            child: const Text(
-                              'Add 1 Point ',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(150, 50),
-                            ),
-                            onPressed: () {
-                              context
-                                  .read<PointsCounterCubit>()
-                                  .teamIncrement(PointsCatogryStstus.A, 2);
-                            },
-                            child: const Text(
-                              'Add 2 Point',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(150, 50),
-                            ),
-                            onPressed: () {
-                              context
-                                  .read<PointsCounterCubit>()
-                                  .teamIncrement(PointsCatogryStstus.A, 3);
-                            },
-                            child: const Text(
-                              'Add 3 Point ',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
+                          CustomButtonIncerment(
+                              onPressed: () {
+                                context
+                                    .read<PointsCounterCubit>()
+                                    .teamIncrement(PointsCatogryStstus.A, 1);
+                              },
+                              title: "Add 1 Point"),
+                          CustomButtonIncerment(
+                              onPressed: () {
+                                context
+                                    .read<PointsCounterCubit>()
+                                    .teamIncrement(PointsCatogryStstus.A, 2);
+                              },
+                              title: "Add 2 Point"),
+                          CustomButtonIncerment(
+                              onPressed: () {
+                                context
+                                    .read<PointsCounterCubit>()
+                                    .teamIncrement(PointsCatogryStstus.A, 3);
+                              },
+                              title: "Add 3 Point"),
                         ],
                       ),
                     ),
@@ -124,83 +91,37 @@ class PointsCounter extends StatelessWidget {
                               fontSize: 150,
                             ),
                           ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.all(8),
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(150, 50),
-                            ),
-                            onPressed: () {
-                              context
-                                  .read<PointsCounterCubit>()
-                                  .teamIncrement(PointsCatogryStstus.B, 1);
-                            },
-                            child: const Text(
-                              'Add 1 Point ',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(150, 50),
-                            ),
-                            onPressed: () {
-                              context
-                                  .read<PointsCounterCubit>()
-                                  .teamIncrement(PointsCatogryStstus.B, 2);
-                            },
-                            child: const Text(
-                              'Add 2 Point ',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(150, 50),
-                            ),
-                            onPressed: () {
-                              context
-                                  .read<PointsCounterCubit>()
-                                  .teamIncrement(PointsCatogryStstus.B, 3);
-                            },
-                            child: const Text(
-                              'Add 3 Point ',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
+                          CustomButtonIncerment(
+                              onPressed: () {
+                                context
+                                    .read<PointsCounterCubit>()
+                                    .teamIncrement(PointsCatogryStstus.B, 1);
+                              },
+                              title: "Add 1 Point"),
+                          CustomButtonIncerment(
+                              onPressed: () {
+                                context
+                                    .read<PointsCounterCubit>()
+                                    .teamIncrement(PointsCatogryStstus.B, 2);
+                              },
+                              title: "Add 2 Point"),
+                          CustomButtonIncerment(
+                              onPressed: () {
+                                context
+                                    .read<PointsCounterCubit>()
+                                    .teamIncrement(PointsCatogryStstus.B, 3);
+                              },
+                              title: "Add 3 Point"),
                         ],
                       ),
                     ),
                   ],
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(8),
-                    backgroundColor: Colors.orange,
-                    minimumSize: const Size(150, 50),
-                  ),
-                  onPressed: () {
-                    context.read<PointsCounterCubit>().clear();
-                  },
-                  child: const Text(
-                    'Reset',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
+                CustomButtonIncerment(
+                    onPressed: () {
+                      context.read<PointsCounterCubit>().clear();
+                    },
+                    title: "Reset")
               ],
             ),
           );
