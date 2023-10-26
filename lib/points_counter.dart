@@ -49,7 +49,7 @@ class PointsCounter extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<PointsCounterCubit>()
-                                  .teamAIncrement(1);
+                                  .teamIncrement(PointsCatogryStstus.A, 1);
                             },
                             child: const Text(
                               'Add 1 Point ',
@@ -67,7 +67,7 @@ class PointsCounter extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<PointsCounterCubit>()
-                                  .teamAIncrement(2);
+                                  .teamIncrement(PointsCatogryStstus.A, 2);
                             },
                             child: const Text(
                               'Add 2 Point',
@@ -85,7 +85,7 @@ class PointsCounter extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<PointsCounterCubit>()
-                                  .teamAIncrement(3);
+                                  .teamIncrement(PointsCatogryStstus.A, 3);
                             },
                             child: const Text(
                               'Add 3 Point ',
@@ -133,7 +133,7 @@ class PointsCounter extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<PointsCounterCubit>()
-                                  .teamBIncrement(1);
+                                  .teamIncrement(PointsCatogryStstus.B, 1);
                             },
                             child: const Text(
                               'Add 1 Point ',
@@ -151,7 +151,7 @@ class PointsCounter extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<PointsCounterCubit>()
-                                  .teamBIncrement(2);
+                                  .teamIncrement(PointsCatogryStstus.B, 2);
                             },
                             child: const Text(
                               'Add 2 Point ',
@@ -169,7 +169,7 @@ class PointsCounter extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<PointsCounterCubit>()
-                                  .teamBIncrement(3);
+                                  .teamIncrement(PointsCatogryStstus.B, 3);
                             },
                             child: const Text(
                               'Add 3 Point ',
@@ -191,7 +191,7 @@ class PointsCounter extends StatelessWidget {
                     minimumSize: const Size(150, 50),
                   ),
                   onPressed: () {
-                    context.read<PointsCounterCubit>().teamAIncrement(1);
+                    context.read<PointsCounterCubit>().clear();
                   },
                   child: const Text(
                     'Reset',
